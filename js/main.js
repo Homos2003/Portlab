@@ -102,3 +102,17 @@ for (let i = 0; i < questions.length; i++) {
     }
   });
 }
+
+// Scroll To Top
+
+let scroll = document.querySelector(".top");
+
+window.onscroll = function () {
+  this.scrollY >= 1000
+    ? scroll.classList.add("show")
+    : scroll.classList.remove("show");
+};
+
+scroll.onclick = function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
